@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to use-animate-css 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="https://badge.fury.io/js/use-animate-css"><img src="https://badge.fury.io/js/use-animate-css.svg" alt="npm version" height="18"></a>
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
@@ -29,31 +29,34 @@ import React, { useState, useCallback } from 'react'
 import { useAnimateCss } from 'use-animate-css'
 
 export const B: React.FC = () => {
-	const [visible, setVisible] = useState(true)
-	const { className, ...handler } = useAnimateCss({
-		in: {
-			classNames: ['zoomIn', 'faster'],
-		},
-		out: {
-			classNames: ['zoomOut', 'faster'],
-		},
-		isVisible: visible,
-	})
+  const [visible, setVisible] = useState(true)
+  const { className, ...handler } = useAnimateCss({
+    in: {
+      classNames: ['zoomIn', 'faster'],
+    },
+    out: {
+      classNames: ['zoomOut', 'faster'],
+    },
+    isVisible: visible,
+  })
 
-	const handleClick = useCallback(() => void setVisible(visible => !visible), [])
+  const handleClick = useCallback(
+    () => void setVisible(visible => !visible),
+    []
+  )
 
-	return (
-		<>
-			<div
-				style={{ backgroundColor: 'lightskyblue', width: 100, height: 100 }}
-				className={className}
-				{...handler}
-			>
-				B
-			</div>
-			<button onClick={handleClick}>toggle B</button>
-		</>
-	)
+  return (
+    <>
+      <div
+        style={{ backgroundColor: 'lightskyblue', width: 100, height: 100 }}
+        className={className}
+        {...handler}
+      >
+        B
+      </div>
+      <button onClick={handleClick}>toggle B</button>
+    </>
+  )
 }
 ```
 
