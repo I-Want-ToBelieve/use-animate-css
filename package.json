@@ -1,0 +1,61 @@
+{
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "name": "use-animate-css",
+  "author": "doublethinkio",
+  "homepage": "https://github.com/doublethinkio/use-animate-css/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doublethinkio/use-animate-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/doublethinkio/use-animate-css/issues"
+  },
+  "module": "dist/use-animate-css.esm.js",
+  "devDependencies": {
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "@testing-library/react": "^10.4.3",
+    "@testing-library/react-hooks": "^3.3.0",
+    "@types/react": "^16.9.38",
+    "@types/react-dom": "^16.9.8",
+    "husky": "^4.2.5",
+    "jest-transform-stub": "^2.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "tsdx": "^0.13.2",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.0",
+    "emotion": "^10.0.27",
+    "react-use": "^15.3.2"
+  }
+}
