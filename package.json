@@ -1,5 +1,5 @@
 {
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -27,6 +27,7 @@
     }
   },
   "name": "use-animate-css",
+  "description": "Using [animate.css](https://github.com/animate-css/animate.css) with React Hook",
   "author": "doublethinkio",
   "homepage": "https://github.com/doublethinkio/use-animate-css/blob/master/README.md",
   "repository": {
